@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import ChatBox from './ChatBox.svelte';
+	import { createEventDispatcher } from 'svelte';
 
 	let transformed_data: any[] = [];
+	const dispatch = createEventDispatcher();
 
 	export let data = [
 		{
@@ -90,6 +92,8 @@
 
 			current.push(transformed_data[current_index]);
 			current = current;
+
+			if (transformed_data[current_index].final) dispatch('final');
 		}
 
 		requestAnimationFrame(run);

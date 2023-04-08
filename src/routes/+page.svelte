@@ -1,8 +1,11 @@
 <script lang="ts">
 	import Crosswords from '$lib/components/Crosswords.svelte';
+	import UserPrompt from '$lib/components/UserPrompt.svelte';
 	import { example1 } from '$lib/crosswords';
 	import ChatScheduler from '../lib/components/ChatScheduler.svelte';
 	import { onMount } from 'svelte';
+
+	let showExample = false;
 
 	// onMount(() => {
 	// 	fetch('/api/crosswords', {
@@ -24,8 +27,11 @@
 </script>
 
 <main>
-	<ChatScheduler />
-	<Crosswords data={example1} />
+	<ChatScheduler on:final={() => (showExample = true)} />
+	{#if showExample}
+		<Crosswords data={example1} />
+	{/if}
+	<UserPrompt />
 </main>
 
 <style>
