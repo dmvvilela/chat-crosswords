@@ -3,6 +3,7 @@
 	import ChatBox from './ChatBox.svelte';
 
 	let transformed_data: any[] = [];
+
 	export let data = [
 		{
 			text: 'Hi!',

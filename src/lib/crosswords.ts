@@ -17,6 +17,7 @@ export type TCrosswords = {
 };
 
 export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrosswords[] {
+	console.log(options);
 	const words = options.map((o: any) => o.answer.toUpperCase());
 	const result = CWG(words);
 	const data = result.positionObjArr.map((item: any) => {
@@ -34,64 +35,62 @@ export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrossword
 
 export const example1 = [
 	{
-		word: 'Brady',
+		answer: 'Brady',
 		clue: 'Quarterback with the most Super Bowl rings'
 	},
 	{
-		word: 'Sanders',
+		answer: 'Sanders',
 		clue: 'Only player with 1,000 yards rushing in 10 seasons'
 	},
 	{
-		word: 'Rice',
+		answer: 'Rice',
 		clue: 'Wide receiver with the most career receiving yards'
 	},
 	{
-		word: 'Gonzalez',
+		answer: 'Gonzalez',
 		clue: 'Tight end with the most career receiving yards'
 	},
 	{
-		word: 'Montana',
+		answer: 'Montana',
 		clue: 'Quarterback with the highest passer rating in Super Bowl history'
 	},
 	{
-		word: 'Brown',
+		answer: 'Brown',
 		clue: 'Running back with the most rushing yards in a single season'
 	},
 	{
-		word: 'Lewis',
+		answer: 'Lewis',
 		clue: 'Linebacker with the most Pro Bowl appearances as a defensive player'
 	},
 	{
-		word: 'Sanders',
+		answer: 'Sanders',
 		clue: 'Cornerback with the most interceptions in a single season'
 	},
 	{
-		word: 'Bettis',
+		answer: 'Bettis',
 		clue: 'Only running back to rush for 1,000 yards in his 13th season'
 	}
 ];
 
-export const example2 = {
-	crossword: [
-		{
-			word: 'Brady',
-			clue: 'A quarterback who has won seven Super Bowls and is regarded as one of the greatest players of all time in the NFL.'
-		},
-		{
-			word: 'Rice',
-			clue: 'A wide receiver who holds the records for most receptions, receiving yards, and touchdown receptions in NFL history.'
-		},
-		{
-			word: 'Sanders',
-			clue: 'A running back who is considered one of the greatest in NFL history, with impressive records and many accolades.'
-		},
-		{
-			word: 'Payton',
-			clue: 'A running back who played his entire NFL career with the Chicago Bears and is known for his record-breaking performances.'
-		},
-		{
-			word: 'Smith',
-			clue: 'A running back who set the record for most rushing yards in NFL history and was named to multiple Pro Bowls.'
-		}
-	]
-};
+export const example2 = [
+	{
+		answer: 'Brady',
+		clue: 'A quarterback who has won seven Super Bowls and is regarded as one of the greatest players of all time in the NFL.'
+	},
+	{
+		answer: 'Rice',
+		clue: 'A wide receiver who holds the records for most receptions, receiving yards, and touchdown receptions in NFL history.'
+	},
+	{
+		answer: 'Sanders',
+		clue: 'A running back who is considered one of the greatest in NFL history, with impressive records and many accolades.'
+	},
+	{
+		answer: 'Payton',
+		clue: 'A running back who played his entire NFL career with the Chicago Bears and is known for his record-breaking performances.'
+	},
+	{
+		answer: 'Smith',
+		clue: 'A running back who set the record for most rushing yards in NFL history and was named to multiple Pro Bowls.'
+	}
+];

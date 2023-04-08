@@ -25,6 +25,7 @@
 
 	onMount(() => {
 		puzzle = generateCrosswordsPuzzle(data);
+		console.log(data, puzzle);
 	});
 </script>
 
