@@ -14,11 +14,12 @@ export const POST = (async ({ request }) => {
 	const openai = new OpenAIApi(configuration);
 
 	const prompt = `
-		Generate a list of crossword words and clues in json format. 
-		It must have between 5 and 10 units. Each word should have a clue. 
+		Generate a list of crossword answers and clues in json format. 
+		It must have between 5 and 10 units. 
+		It should be an array with objects with the following keys: "clue", "answer".
 		The clues should be between 15 and 150 characters long.
-		The words should be between 3 and 10 characters long. 
-		It should be about this topic: Best NFL players of all time.
+		The answer should be between 3 and 10 characters long. 
+		It should be about this topic: ${userPrompt}.
 		`;
 
 	try {

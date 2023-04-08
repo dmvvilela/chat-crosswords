@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import ChatBox from './chatBox.svelte';
+	import ChatBox from './ChatBox.svelte';
 
 	let transformed_data: any[] = [];
 	export let data = [
@@ -54,11 +54,11 @@
 		}
 	];
 
-	let current = [];
+	let current: any[] = [];
 	let timer = 0;
 	let current_index = 0;
 
-	function readingTime(text) {
+	function readingTime(text: string) {
 		const wps = 225 / 60;
 		const words = text.trim().split(/\s+/).length;
 		const time = Math.ceil((words / wps) * 1000);
@@ -107,8 +107,8 @@
 </script>
 
 <div>
-	{#each current as { text, who, ready, final, isolateDelay }}
-		<ChatBox {who} {text} {ready} {final} {isolateDelay} />
+	{#each current as { text, who, ready, isolateDelay }}
+		<ChatBox {who} {text} {ready} {isolateDelay} />
 	{/each}
 </div>
 
