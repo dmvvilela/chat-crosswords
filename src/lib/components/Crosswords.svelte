@@ -1,8 +1,6 @@
 <script lang="ts">
 	// @ts-ignore
 	import Crossword from 'svelte-crossword';
-	// @ts-ignore
-	import CWG from 'cwg';
 	import { onMount } from 'svelte';
 	import { generateCrosswordsPuzzle } from '$lib/crosswords';
 
@@ -29,4 +27,6 @@
 	});
 </script>
 
-<Crossword data={puzzle} />
+{#if puzzle}
+	<Crossword data={puzzle} />
+{/if}
