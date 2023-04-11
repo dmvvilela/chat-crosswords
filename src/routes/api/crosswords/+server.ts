@@ -15,10 +15,11 @@ export const POST = (async ({ request }) => {
 
 	const prompt = `
 		Generate a list of crossword answers and clues in json format. 
-		It must have between 5 and 10 units. 
+		It should have around 8 units. 
 		It should be an array with objects with the following keys: "clue", "answer".
 		The clues should be between 15 and 150 characters long.
 		The answer should be between 3 and 10 characters long. 
+		The answer should ideally be a single word and cannot contain any special characters.
 		It should be about this topic: ${userPrompt}.
 		`;
 
@@ -45,7 +46,7 @@ export const POST = (async ({ request }) => {
 		// 	return { word: word.trim(), clue: clue.trim() };
 		// });
 
-		return json({ outputList: output });
+		return json({ crosswords: output });
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	} catch (e: any) {
 		console.log(e);
