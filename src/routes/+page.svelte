@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Crosswords from '$lib/components/Crosswords.svelte';
 	import UserPrompt from '$lib/components/UserPrompt.svelte';
-	import { example1 } from '$lib/crosswords';
+	import { example1, example2 } from '$lib/crosswords';
 	import { fly } from 'svelte/transition';
 	import ChatScheduler from '../lib/components/ChatScheduler.svelte';
 
@@ -71,7 +71,7 @@
 	<ChatScheduler on:final={() => (showExample = true)} />
 	{#if showExample}
 		<div in:fly={{ y: 50, opacity: 0, duration: 250, delay: 2500 }}>
-			<Crosswords data={example1} />
+			<Crosswords data={example2} />
 		</div>
 	{/if}
 	{#if userPrompted}
