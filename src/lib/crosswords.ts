@@ -17,20 +17,25 @@ export type TCrosswords = {
 };
 
 export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrosswords[] {
-	console.log(options);
-	const words = options.map((o: any) => o.answer.toUpperCase());
-	const result = CWG(words);
-	const data = result.positionObjArr.map((item: any) => {
-		return {
-			clue: options.find((w: any) => w.answer.toUpperCase() === item.wordStr)?.clue,
-			answer: item.wordStr,
-			direction: item.isHorizon ? 'across' : 'down',
-			x: item.xNum,
-			y: item.yNum
-		};
-	});
+	try {
+		const words = options.map((o: any) => o.answer.toUpperCase());
+		const result = CWG(words);
+		console.log(result);
+		const data = result.positionObjArr.map((item: any) => {
+			return {
+				clue: options.find((w: any) => w.answer.toUpperCase() === item.wordStr)?.clue,
+				answer: item.wordStr,
+				direction: item.isHorizon ? 'across' : 'down',
+				x: item.xNum,
+				y: item.yNum
+			};
+		});
 
-	return data;
+		return data;
+	} catch (error) {
+		console.log(error);
+		return [];
+	}
 }
 
 export const example1 = [
