@@ -18,10 +18,8 @@ export type TCrosswords = {
 
 export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrosswords[] {
 	try {
-		const words = options.map((o: any) => o.answer.replaceAll(' ', ''));
-		console.log(words);
+		const words = options.map((o: any) => o.answer.toUpperCase().replaceAll(' ', ''));
 		const result = CWG(words);
-		console.log(result);
 		const data = result.positionObjArr.map((item: any) => {
 			return {
 				clue: options.find((w: any) => w.answer.toUpperCase() === item.wordStr)?.clue,
@@ -31,6 +29,7 @@ export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrossword
 				y: item.yNum
 			};
 		});
+		console.log(data);
 
 		return data;
 	} catch (error) {
