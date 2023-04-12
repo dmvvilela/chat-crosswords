@@ -18,7 +18,8 @@ export type TCrosswords = {
 
 export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrosswords[] {
 	try {
-		const words = options.map((o: any) => o.answer.toUpperCase());
+		const words = options.map((o: any) => o.answer.replaceAll(' ', ''));
+		console.log(words);
 		const result = CWG(words);
 		console.log(result);
 		const data = result.positionObjArr.map((item: any) => {

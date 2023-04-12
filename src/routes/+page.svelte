@@ -51,12 +51,7 @@
 
 		init(apiKey);
 		promptAI(prompt).then((data) => {
-			crosswordsData = JSON.parse(data.crosswords).map((crossword: any) => {
-				return {
-					clue: crossword.clue,
-					answer: crossword.answer.replaceAll(' ', '')
-				};
-			});
+			crosswordsData = JSON.parse(data.crosswords);
 		});
 	}
 </script>
