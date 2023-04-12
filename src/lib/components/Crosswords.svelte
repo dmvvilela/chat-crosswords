@@ -23,7 +23,8 @@
 
 	onMount(() => {
 		puzzle = generateCrosswordsPuzzle(data);
-		console.log(data, puzzle);
+		console.log('DATA:', data);
+		console.log('PUZZLE:', puzzle);
 	});
 </script>
 

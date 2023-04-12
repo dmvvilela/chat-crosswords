@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from 'openai';
 
 let openai: OpenAIApi;
 
-export function init(apiKey) {
+export function init(apiKey: string) {
 	const configuration = new Configuration({ apiKey });
 
 	openai = new OpenAIApi(configuration);

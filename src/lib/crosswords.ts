@@ -19,7 +19,9 @@ export type TCrosswords = {
 export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrosswords[] {
 	try {
 		const words = options.map((o: any) => o.answer.toUpperCase().replaceAll(' ', ''));
+		console.log('WORDS: ', words);
 		const result = CWG(words);
+		console.log('RESULT: ', result);
 		const data = result.positionObjArr.map((item: any) => {
 			return {
 				clue: options.find((w: any) => w.answer.toUpperCase() === item.wordStr)?.clue,
@@ -29,7 +31,7 @@ export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrossword
 				y: item.yNum
 			};
 		});
-		console.log(data);
+		console.log('DATA: ', data);
 
 		return data;
 	} catch (error) {
