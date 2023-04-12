@@ -1,13 +1,7 @@
 <script lang="ts">
 	export let prompt = '';
 	export let onClick: () => void;
-
-	let disabled = false;
-
-	function handleOnClick() {
-		onClick();
-		disabled = true;
-	}
+	export let disabled = false;
 </script>
 
 <div class="dark mt-12">
@@ -22,7 +16,6 @@
 					placeholder="Prompt a crosswords topic..."
 					bind:value={prompt}
 					autocomplete="off"
-					{disabled}
 					required
 				/>
 			</div>
@@ -30,7 +23,7 @@
 				<button
 					type="button"
 					class="inline-flex cursor-pointer items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-900 hover:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-blue-700"
-					on:click={handleOnClick}
+					on:click={onClick}
 					{disabled}
 				>
 					Generate Crossword
@@ -39,8 +32,8 @@
 		</div>
 	</form>
 	<p class="ml-auto text-xs text-gray-500">
-		For the purposes of this proof of concept, playing the game is limited to one prompt per user
-		session. You can check the repository on my
+		For the purposes of this proof of concept, the user should use his own API Key below. For more
+		information, check the repository on my
 		<a
 			href="https://github.com/dmvvilela/chat-crosswords"
 			target="_blank"

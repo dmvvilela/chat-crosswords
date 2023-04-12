@@ -14,47 +14,47 @@
 		{
 			text: "Let's play crosswords!",
 			who: 'them'
-		},
-		{
-			text: 'Just prompt me with a topic and I will give you a puzzle!',
-			who: 'them'
-		},
-		{
-			text: 'Awesome! Do you have an example?',
-			who: 'you'
-		},
-		{
-			text: "Sure! Let's start with a simple one!",
-			who: 'them'
-		},
-		{
-			text: 'How about the best NFL players of all time?',
-			who: 'them'
-		},
-		{
-			text: 'Sure!',
-			who: 'you'
-		},
-		{
-			text: "Awesome! Let's get started!",
-			who: 'them'
-		},
-		{
-			text: 'Remember, you can always prompt me with a new topic!',
-			who: 'them'
-		},
-		{
-			text: "Cool! Let's start!",
-			who: 'you'
-		},
-		{
-			text: 'Building the puzzle...',
-			who: 'them'
-		},
-		{
-			text: 'Here you go!',
-			who: 'them'
 		}
+		// {
+		// 	text: 'Just prompt me with a topic and I will give you a puzzle!',
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: 'Awesome! Do you have an example?',
+		// 	who: 'you'
+		// },
+		// {
+		// 	text: "Sure! Let's start with a simple one!",
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: 'How about the best NFL players of all time?',
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: 'Sure!',
+		// 	who: 'you'
+		// },
+		// {
+		// 	text: "Awesome! Let's get started!",
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: 'Remember, you can always prompt me with a new topic!',
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: "Cool! Let's start!",
+		// 	who: 'you'
+		// },
+		// {
+		// 	text: 'Building the puzzle...',
+		// 	who: 'them'
+		// },
+		// {
+		// 	text: 'Here you go!',
+		// 	who: 'them'
+		// }
 	];
 
 	let current: any[] = [];
