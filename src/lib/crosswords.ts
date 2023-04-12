@@ -23,15 +23,15 @@ export function generateCrosswordsPuzzle(options: TCrosswordsData[]): TCrossword
 		console.log('WORDS: ', words);
 		const result = CWG(words);
 		console.log('RESULT: ', result);
-		const data = result.positionObjArr.map((item: any) => {
-			return {
+		const data = result.positionObjArr
+			.map((item: any) => ({
 				clue: options.find((w: any) => w.answer.toUpperCase() === item.wordStr)?.clue,
 				answer: item.wordStr,
 				direction: item.isHorizon ? 'across' : 'down',
 				x: item.xNum,
 				y: item.yNum
-			};
-		});
+			}))
+			.filter((item: any) => item.clue !== undefined && item.answer !== undefined);
 		console.log('DATA: ', data);
 
 		return data;
