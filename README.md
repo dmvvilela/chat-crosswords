@@ -4,3 +4,4 @@ A project for Svelte Society's Hackaton (SvelteHack) where it uses openAI's chat
 
 [DEMO](https://chat-crosswords.vercel.app/)
 
+For this demo you'll need an API Key from Open AI. You can get one at [OpenAI](https://platform.openai.com/)

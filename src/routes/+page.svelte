@@ -14,7 +14,7 @@
 
 	$: prompt = '';
 	$: apiKey = '';
-	$: disabled = apiKey === '' || prompt === '';
+	$: disabled = apiKey === '' || prompt === '' || userPrompted;
 
 	let chatData = [
 		{

@@ -48,7 +48,7 @@ devDependencies:
     version: 3.0.4(postcss@8.4.21)(svelte@3.57.0)
   svelte-crossword:
     specifier: github:dmvvilela/svelte-crossword
-    version: github.com/dmvvilela/svelte-crossword/9b507ddda376d9634392d2a8d40636080f2c0573(svelte@3.57.0)
+    version: github.com/dmvvilela/svelte-crossword/13b0efae8b61eb563eec5315a6d40a651cd6e052(svelte@3.57.0)
   tailwindcss:
     specifier: ^3.3.0
     version: 3.3.0(postcss@8.4.21)
@@ -2177,9 +2177,9 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/dmvvilela/svelte-crossword/9b507ddda376d9634392d2a8d40636080f2c0573(svelte@3.57.0):
-    resolution: {tarball: https://codeload.github.com/dmvvilela/svelte-crossword/tar.gz/9b507ddda376d9634392d2a8d40636080f2c0573}
-    id: github.com/dmvvilela/svelte-crossword/9b507ddda376d9634392d2a8d40636080f2c0573
+  github.com/dmvvilela/svelte-crossword/13b0efae8b61eb563eec5315a6d40a651cd6e052(svelte@3.57.0):
+    resolution: {tarball: https://codeload.github.com/dmvvilela/svelte-crossword/tar.gz/13b0efae8b61eb563eec5315a6d40a651cd6e052}
+    id: github.com/dmvvilela/svelte-crossword/13b0efae8b61eb563eec5315a6d40a651cd6e052
     name: svelte-crossword
     version: 0.3.4
     peerDependencies:
