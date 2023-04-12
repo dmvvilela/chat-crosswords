@@ -28,6 +28,6 @@
 	});
 </script>
 
-{#if puzzle}
+{#if puzzle?.length}
 	<Crossword data={puzzle} />
 {/if}

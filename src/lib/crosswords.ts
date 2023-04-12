@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import CWG from 'cwg';
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// /* eslint-disable @typescript-eslint/ban-ts-comment */
+// // @ts-ignore
+// import CWG from 'cwg';
+import CWG from '$lib/cwg';
 
 export type TCrosswordsData = {
 	clue: string;
